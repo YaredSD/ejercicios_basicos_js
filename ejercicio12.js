@@ -11,14 +11,16 @@ const duplicates = [
     'pasta',
     'soda'
   ];
+
   function removeDuplicates(list) {
-    
+    const once = []
+    list.forEach((word) => {
+      if (!once.includes(word)) {
+        once.push(word);
+      }
+      return;
+    });
+    console.log(once)
   }
 
-  console.log (removeDuplicates(duplicates));
-  /*
-  Valores únicos: Crea una función que reciba por parámetro un array y compruebe si existen elementos duplicados, en caso que existan los elimina para retornar un array sin los elementos duplicados.
-
-Pista: puedes generar un nuevo array y devolverlo.
-
-Puedes usar este array para probar tu función:*/
+  console.log(removeDuplicates(duplicates));
