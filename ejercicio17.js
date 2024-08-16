@@ -5,11 +5,6 @@ const alien = {
     weight: 180
 };
 
-
-/*
-For...in: Usa un for...in para imprimir por consola los datos del alienígena.
-
-Debería tener este formato cada uno de los console.log: "La propiedad ____ tiene cómo valor: ____"
-
-Puedes usar este objeto:
-*/
+for (const property in alien) {
+        console.log("La propiedad" + " " + property + " " + "tiene como valor" + " " + alien[property]);
+    }

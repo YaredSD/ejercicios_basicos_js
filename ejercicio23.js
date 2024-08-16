@@ -11,6 +11,24 @@ const movies = [
     { name: "Eternal Sunshine of the Spotless Mind", durationInMinutes: 108 },
   ];
   
+  const ShortFilms = [];
+  const MediumFilms = [];
+  const LargeFilms = [];
+
+  for (const film of movies) {
+    if (film.durationInMinutes < 100) {
+      ShortFilms.push(film)
+    } else if (film.durationInMinutes >100 && film.durationInMinutes <200) {
+      MediumFilms.push(film);
+    } else {
+      LargeFilms.push(film)
+    }    
+  }
+
+console.log("Peliculas pequeñas (<100 min.): " , ShortFilms);
+console.log("Películas medianas (100-200 min.): " , MediumFilms);
+console.log("películas grandes (>200 min.): " , LargeFilms);
+
 
 /*
 Usa un bucle para crear 3 arrays de películas filtrados por categorías.
